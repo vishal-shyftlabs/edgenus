@@ -1,19 +1,20 @@
 "use client";
-import Image from "next/image";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import Modules from "./components/Modules";
-import ReachOut from "./components/ReachOut";
-import Contact from "./components/Contact";
+import WhyChooseUs from "./components/WhyChooseUs";
 
 export default function Home() {
   return (
     <>
-      {/* <Header /> */}
+      <Header />
       <Hero />
       <Modules />
-      <ReachOut />
-      {/* <Footer/> */}
+      <div
+        id="customer"
+        className="looking-out looking-out-properties text-white relative"
+      />
+      <WhyChooseUs />
     </>
   );
 }

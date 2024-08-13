@@ -1,10 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
 import Image from "next/image";
 
-const ImageCard = ({ data, children }) => {
+const ImageCard = ({
+  data = {},
+  children = <></>,
+  idx = null,
+  activeId = null,
+  setActiveId = () => {},
+  className = "",
+}) => {
   return (
-    <div className="rounded shadow-lg img-card">
+    <div
+      className="img-card relative"
+      onClick={() => {
+        setActiveId(idx);
+      }}
+    >
       <div
         style={{
           background: `url(${data.imgPath})`,
@@ -12,13 +24,29 @@ const ImageCard = ({ data, children }) => {
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
         }}
-        className="rounded-t-md image"
+        className={`rounded-t-md image ${className}`}
       ></div>
-      <div className="p-3 bg-white text-black">
-        <div className="font-bold">{data.title}</div>
-        <div className="h-[48px]">{data.subtitle}</div>
-        {children}
-      </div>
+      {activeId === idx && (
+        <div className="p-3 bg-primary h-3/4 text-white absolute bottom-0 rounded-md w-full !overflow-scroll">
+          {data.points?.map((point, i) => (
+            <div key={`point-${i}`} className="text-sm py-2">
+              <div className="font-bold flex">
+                <img
+                  alt="point"
+                  src="point.png"
+                  className="mr-3 h-[13.5px] w-[13.5px] mt-1"
+                />{" "}
+                {point.title}
+              </div>
+              <div className="flex">
+                <div className="mr-3 h-[13.5px] w-[13.5px] mt-1 invisible" />
+                {point.subtitle}
+              </div>
+            </div>
+          ))}
+          {children}
+        </div>
+      )}
     </div>
   );
 };
