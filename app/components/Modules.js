@@ -239,7 +239,7 @@ const Modules = (props) => {
 
   return (
     <div className="md:px-20 px-8 bg-white py-20" id="modules">
-      <div className="text-32 font-bold text-center">
+      <div className="text-24 md:text-32 font-bold">
         Modules in our Business automation suite
       </div>
       <div className="flex flex-wrap gap-x-6 justify-center my-6">
@@ -252,10 +252,10 @@ const Modules = (props) => {
               idx={i}
               activeId={activeId}
               setActiveId={setActiveId}
-              className="h-[404px]"
+              className="w-[312px] h-[352px] !md:w-[504px]"
             >
-              <div className="items-center p-14">
-                <img src={module.imgPath} />
+              <div className="items-center my-5 mx-auto">
+                <img src={module.imgPath} className="h-[194px]" />
               </div>
             </Card>
           </div>

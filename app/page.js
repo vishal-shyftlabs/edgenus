@@ -10,13 +10,11 @@ export default function Home() {
   return (
     <>
       <Header />
-      <div className="translate-y-20">
-        <Hero />
-        <Modules />
-        <LookingOut />
-        <WhyChooseUs />
-        <Footer />
-      </div>
+      <Hero />
+      <Modules />
+      <LookingOut />
+      <WhyChooseUs />
+      <Footer />
     </>
   );
 }

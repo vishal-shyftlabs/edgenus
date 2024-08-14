@@ -19,8 +19,11 @@ module.exports = {
         footer: "#F5F5F5",
       },
       fontSize: {
+        20: "20px",
+        22: "22px",
         24: "24px",
         32: "32px",
+        44: "44px",
       },
     },
   },

@@ -20,9 +20,15 @@ const Card = ({
         activeId === idx ? setActiveId(null) : setActiveId(idx);
       }}
     >
-      <div className="font-bold text-xl mb-2 text-primary">{title}</div>
-      <p className="text-gray-700 text-base text-wrap">{content}</p>
-      {children}
+      <div className="flex flex-col !justify-between">
+        <div>
+          <div className="font-bold text-xl mb-2 text-primary text-22">
+            {title}
+          </div>
+          <p className="text-gray-700 text-wrap text-lg">{content}</p>
+        </div>
+        {children}
+      </div>
       {activeId === idx && (
         <div className="p-3 bg-primary h-2/3 text-white absolute bottom-0 left-0 rounded-md w-full !overflow-scroll">
           {data.points?.map((point, i) => (

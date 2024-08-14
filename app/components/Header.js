@@ -37,7 +37,6 @@ const Header = (props) => {
           <a href="#modules">Modules</a>
         </div>
         <div>
-          {" "}
           <a href="#customer">Customer</a>
         </div>
         <div>
@@ -48,7 +47,7 @@ const Header = (props) => {
         </div>
       </div>
       {isOpen && (
-        <div className="md:hidden font-semibold rounded-b-md mt-2 py-3 px-10 space-y-2 text-black absolute flex flex-col left-0 -bottom-[7rem] z-50 w-full overflow-visible bg-white">
+        <div className="md:hidden font-medium rounded-b-md mt-2 py-3 px-10 space-y-2 text-black absolute flex flex-col left-0 -bottom-[10rem] z-50 w-full overflow-visible bg-white">
           <div>
             <a href="#modules" onClick={toggleMenu}>
               Modules
@@ -64,6 +63,9 @@ const Header = (props) => {
             <a href="#why-choose-us" onClick={toggleMenu}>
               Why choose us?
             </a>
+          </div>
+          <div className="opacity-100">
+            <PrimaryButton text="Get started" onClick={() => {}} />
           </div>
         </div>
       )}
