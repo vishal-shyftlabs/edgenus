@@ -16,9 +16,10 @@ const Card = ({
       style={{
         backgroundColor: idx % 2 == 0 ? "#D7D5FF" : "#FFECC7",
       }}
-      onClick={() => {
-        activeId === idx ? setActiveId(null) : setActiveId(idx);
+      onMouseOver={() => {
+        setActiveId(idx);
       }}
+      onMouseOut={() => setActiveId(null)}
     >
       <div className="flex flex-col !justify-between">
         <div>
@@ -30,7 +31,7 @@ const Card = ({
         {children}
       </div>
       {activeId === idx && (
-        <div className="p-3 bg-primary h-2/3 text-white absolute bottom-0 left-0 rounded-md w-full !overflow-scroll">
+        <div className="p-3 bg-primary h-2/3 text-white absolute bottom-0 left-0 rounded-md w-full scrollbar">
           {data.points?.map((point, i) => (
             <div key={`point-${i}`} className="text-sm py-2">
               <div className="font-bold flex ">
