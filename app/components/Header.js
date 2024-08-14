@@ -11,7 +11,7 @@ const Header = (props) => {
   };
   return (
     // <div className="relative">
-    <div className="w-full my-auto py-3 px-8 md:px-20  flex justify-between items-center fixed z-50 bg-white">
+    <div className="w-full my-auto py-3 px-8 md:px-20  flex justify-between items-center fixed z-50 bg-white opacity-80">
       <div className="font-extrabold text-lg lg:text-24">BIZZGENUS</div>
       {/* Hamburger Menu (Visible until 725px) */}
       <div className="md:hidden">
