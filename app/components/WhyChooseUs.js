@@ -22,11 +22,11 @@ const WhyChooseUs = (props) => {
     },
   ];
   return (
-    <div className="px-8 md:px-20 bg-white py-20" id="why-choose-us">
-      <div className="text-24 md:text-32 font-bold text-center">
+    <div className="px-8 sm:px-20 bg-white py-20" id="why-choose-us">
+      <div className="text-24 sm:text-32 font-bold text-center">
         Why choose us?
       </div>
-      <div className="flex flex-wrap gap-x-auto md:gap-x-6 items-center justify-center my-6">
+      <div className="flex flex-wrap gap-x-auto sm:gap-x-6 items-center justify-center my-6">
         {modules.map((module, i) => (
           <div className="my-6" key={`module-${i}`}>
             <Card
@@ -34,7 +34,7 @@ const WhyChooseUs = (props) => {
               content={module.content}
               className={`${
                 i % 2 == 0 ? "bg-secondary" : "bg-tertiary"
-              } min-h-[208px]`}
+              } w-[312px] md:h-[262px] md:w-[504px]`}
               data={module}
               idx={i}
             />

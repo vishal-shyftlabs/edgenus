@@ -14,18 +14,18 @@ const Hero = (props) => {
           />
         </div>
         <div className="flex-col justify-between">
-          <div className="font-bold text-24 md:text-44">
+          <div className="font-bold text-24 sm:text-44">
             Unleash Your <span className="text-primary">Creativity</span>,<br />{" "}
             Leave the Rest to Us!
           </div>
-          <div className="my-10 font-semibold md:text-24">
+          <div className="my-10 font-semibold sm:text-24">
             We’re <span className="text-primary">BizzGenus</span>, providing
             effortless setup &<br /> management for your creative business
           </div>
-          <div className="mb-10 text-sm md:text-20">
+          <div className="mb-10 text-sm sm:text-20">
             Share your business queries with us
           </div>
-          <div className="font-semibold text-sm md:text-lg">
+          <div className="font-semibold text-sm sm:text-lg">
             <PrimaryButton text="Get Started" />
           </div>
         </div>

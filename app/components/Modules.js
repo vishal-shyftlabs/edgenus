@@ -254,7 +254,7 @@ const Modules = (props) => {
               setActiveId={setActiveId}
               className="w-[312px] h-[352px] md:w-[504px]"
             >
-              <div className="items-center my-5 mx-auto">
+              <div className="items-center px-auto mx-auto">
                 <img src={module.imgPath} className="h-[194px]" />
               </div>
             </Card>

@@ -12,7 +12,7 @@ const Card = ({
 }) => {
   return (
     <div
-      className={`max-w-sm rounded overflow-hidden shadow-lg p-6 bg-white ${className} relative`}
+      className={`relative rounded overflow-hidden shadow-lg p-6 bg-white ${className}`}
       style={{
         backgroundColor: idx % 2 == 0 ? "#D7D5FF" : "#FFECC7",
       }}
