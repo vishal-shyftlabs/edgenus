@@ -14,7 +14,7 @@ const Hero = (props) => {
           />
         </div>
         <div className="flex-col justify-between">
-          <div className="font-bold text-24 sm:text-44">
+          <div className="font-extrabold text-24 sm:text-44">
             Unleash Your <span className="text-primary">Creativity</span>,<br />{" "}
             Leave the Rest to Us!
           </div>

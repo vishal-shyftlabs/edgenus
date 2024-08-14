@@ -239,7 +239,7 @@ const Modules = (props) => {
 
   return (
     <div className="md:px-20 px-8 bg-white py-20" id="modules">
-      <div className="text-24 md:text-32 font-bold">
+      <div className="text-24 md:text-32 font-semibold">
         Modules in our Business automation suite
       </div>
       <div className="flex flex-wrap gap-x-6 justify-center my-6">

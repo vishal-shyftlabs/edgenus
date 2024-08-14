@@ -23,7 +23,7 @@ const WhyChooseUs = (props) => {
   ];
   return (
     <div className="px-8 sm:px-20 bg-white py-20" id="why-choose-us">
-      <div className="text-24 sm:text-32 font-bold text-center">
+      <div className="text-24 sm:text-32 font-semibold text-center">
         Why choose us?
       </div>
       <div className="flex flex-wrap gap-x-auto sm:gap-x-6 items-center justify-center my-6">
