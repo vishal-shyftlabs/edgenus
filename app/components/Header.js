@@ -12,12 +12,12 @@ const Header = (props) => {
   return (
     // <div className="relative">
     <div className="w-full my-auto py-3 px-8 md:px-20  flex justify-between items-center fixed z-50 bg-white opacity-80">
-      <div className="font-extrabold text-lg lg:text-24">BIZZGENUS</div>
+      <div className="font-extrabold text-lg sm:text-24">BIZZGENUS</div>
       {/* Hamburger Menu (Visible until 725px) */}
       <div className="md:hidden">
         <button onClick={toggleMenu} className="text-white focus:outline-none">
           <svg
-            className="w-6 h-6"
+            className="w-6 h-6 sm:w-8 sm:h-8"
             fill="none"
             stroke="#000000"
             viewBox="0 0 24 24"
