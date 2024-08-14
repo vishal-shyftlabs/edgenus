@@ -8,7 +8,7 @@ const Footer = (props) => {
       <div className="font-extrabold text-lg sm:text-24">
         <Link href="/">BIZZGENUS</Link>
       </div>
-      <div className="font-extralight text-sm sm:text-20">
+      <div className="font-extralight text-sm sm:text-20 sm:mt-2">
         Powered by <span className="text-primary">Edgenus</span>
       </div>
     </div>
