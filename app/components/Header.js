@@ -12,7 +12,9 @@ const Header = ({ showModules = false }) => {
   return (
     // <div className="relative">
     <div className="w-full my-auto py-3 px-8 md:px-20  flex justify-between items-center fixed z-50 bg-white opacity-80">
-      <div className="font-extrabold text-lg sm:text-24">BIZZGENUS</div>
+      <div className="font-extrabold text-lg sm:text-24">
+        <Link href="/">BIZZGENUS</Link>
+      </div>
       {/* Hamburger Menu (Visible until 725px) */}
       {showModules ? (
         <div className="md:hidden">
