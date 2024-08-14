@@ -238,19 +238,26 @@ const Modules = (props) => {
   const [activeId, setActiveId] = useState(null);
 
   return (
-    <div className="p-8 bg-white py-20" id="modules">
+    <div className="md:px-20 px-8 bg-white py-20" id="modules">
       <div className="text-32 font-bold text-center">
         Modules in our Business automation suite
       </div>
       <div className="flex flex-wrap gap-x-6 justify-center my-6">
         {modules.map((module, i) => (
           <div className="my-6" key={`module-${i}`}>
-            <ImageCard
+            <Card
               data={module}
+              title={module.title}
+              content={module.subtitle}
               idx={i}
               activeId={activeId}
               setActiveId={setActiveId}
-            />
+              className="h-[404px]"
+            >
+              <div className="items-center p-14">
+                <img src={module.imgPath} />
+              </div>
+            </Card>
           </div>
         ))}
       </div>

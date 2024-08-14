@@ -22,7 +22,7 @@ const WhyChooseUs = (props) => {
     },
   ];
   return (
-    <div className="p-8 bg-white py-20" id="why-choose-us">
+    <div className="px-8 md:px-20 bg-white py-20" id="why-choose-us">
       <div className="text-32 font-bold text-center">Why choose us?</div>
       <div className="flex flex-wrap gap-x-auto md:gap-x-6 items-center justify-center my-6">
         {modules.map((module, i) => (
@@ -31,7 +31,7 @@ const WhyChooseUs = (props) => {
               title={module.title}
               content={module.content}
               className={`${
-                i % 2 == 0 ? "bg-[#D7D5FF]" : "bg-[#FFECC7]"
+                i % 2 == 0 ? "bg-secondary" : "bg-tertiary"
               } min-h-[208px]`}
               data={module}
               idx={i}

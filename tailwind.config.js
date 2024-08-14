@@ -15,6 +15,8 @@ module.exports = {
       colors: {
         primary: "#6C63FF",
         secondary: "#D7D5FF",
+        tertiary: "#FFECC7",
+        footer: "#F5F5F5",
       },
       fontSize: {
         24: "24px",
