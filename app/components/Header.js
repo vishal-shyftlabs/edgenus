@@ -38,17 +38,20 @@ const Header = ({ showModules = false }) => {
         </div>
       ) : null}
       {showModules ? (
-        <div className="hidden md:flex text-black text-base md:text-lg gap-x-5 items-center font-medium">
-          <div>
-            <a href="#modules">Modules</a>
+        <>
+          <div className="hidden md:flex text-black text-base md:text-lg gap-x-5 items-center font-medium">
+            {" "}
+            <div>
+              <a href="#modules">Modules</a>
+            </div>
+            <div>
+              <a href="#customer">Customer</a>
+            </div>
+            <div>
+              <a href="#why-choose-us">Why choose us?</a>
+            </div>
           </div>
-          <div>
-            <a href="#customer">Customer</a>
-          </div>
-          <div>
-            <a href="#why-choose-us">Why choose us?</a>
-          </div>
-          <div>
+          <div className="hidden md:flex font-medium">
             <PrimaryButton
               text="Get started"
               onClick={() => {
@@ -56,7 +59,7 @@ const Header = ({ showModules = false }) => {
               }}
             />
           </div>
-        </div>
+        </>
       ) : null}
       {isOpen && (
         <div className="md:hidden font-medium rounded-b-md mt-2 py-3 px-10 space-y-2 text-black absolute flex flex-col left-0 -bottom-[10rem] z-50 w-full overflow-visible bg-white">
