@@ -26,7 +26,12 @@ const Hero = (props) => {
             Share your business queries with us
           </div>
           <div className="font-semibold text-sm sm:text-lg">
-            <PrimaryButton text="Get Started" />
+            <PrimaryButton
+              text="Get Started"
+              onClick={() => {
+                window.location.href = "/get-started";
+              }}
+            />
           </div>
         </div>
 

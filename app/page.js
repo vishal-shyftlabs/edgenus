@@ -9,7 +9,7 @@ import WhyChooseUs from "./components/WhyChooseUs";
 export default function Home() {
   return (
     <>
-      <Header />
+      <Header showModules />
       <Hero />
       <Modules />
       <LookingOut />

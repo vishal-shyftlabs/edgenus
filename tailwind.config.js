@@ -16,7 +16,9 @@ module.exports = {
         primary: "#6C63FF",
         secondary: "#D7D5FF",
         tertiary: "#FFECC7",
+        label: "#4E4E4E",
         footer: "#F5F5F5",
+        input: "#F0F0F0",
       },
       fontSize: {
         20: "20px",
