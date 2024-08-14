@@ -1,14 +1,14 @@
 import React from "react";
 
 const Card = ({
-  title,
-  content,
-  className,
-  idx,
-  activeId,
-  setActiveId,
-  data,
-  children,
+  title = "",
+  content = "",
+  className = "",
+  idx = null,
+  activeId = null,
+  setActiveId = () => {},
+  data = {},
+  children = <></>,
 }) => {
   return (
     <div
@@ -23,9 +23,7 @@ const Card = ({
     >
       <div className="flex flex-col !justify-between">
         <div>
-          <div className="font-bold text-xl mb-2 text-primary text-22">
-            {title}
-          </div>
+          <div className="font-bold mb-2 text-primary text-22">{title}</div>
           <p className="text-gray-700 text-wrap text-lg">{content}</p>
         </div>
         {children}

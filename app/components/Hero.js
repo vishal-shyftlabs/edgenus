@@ -25,7 +25,7 @@ const Hero = (props) => {
           <div className="mb-10 text-sm md:text-20">
             Share your business queries with us
           </div>
-          <div className="font-semibold text-sm md:text-18">
+          <div className="font-semibold text-sm md:text-lg">
             <PrimaryButton text="Get Started" />
           </div>
         </div>

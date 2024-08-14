@@ -252,7 +252,7 @@ const Modules = (props) => {
               idx={i}
               activeId={activeId}
               setActiveId={setActiveId}
-              className="w-[312px] h-[352px] !md:w-[504px]"
+              className="w-[312px] h-[352px] md:w-[504px]"
             >
               <div className="items-center my-5 mx-auto">
                 <img src={module.imgPath} className="h-[194px]" />
