@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import PropTypes from "prop-types";
 import PrimaryButton from "./PrimaryButton";
 import Link from "next/link";
+import OutlineButton from "./OutlineButton";
 
 const Header = ({ showModules = false }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -17,7 +18,7 @@ const Header = ({ showModules = false }) => {
       </div>
       {/* Hamburger Menu (Visible until 725px) */}
       {showModules ? (
-        <div className="md:hidden">
+        <div className="lg:hidden">
           <button
             onClick={toggleMenu}
             className="text-white focus:outline-none"
@@ -41,7 +42,7 @@ const Header = ({ showModules = false }) => {
       ) : null}
       {showModules ? (
         <>
-          <div className="hidden md:flex text-black text-base md:text-lg gap-x-5 items-center font-medium">
+          <div className="hidden lg:flex text-black text-base md:text-lg gap-x-5 items-center font-medium">
             {" "}
             <div>
               <a href="#modules">Modules</a>
@@ -53,18 +54,25 @@ const Header = ({ showModules = false }) => {
               <a href="#why-choose-us">Why choose us?</a>
             </div>
           </div>
-          <div className="hidden md:flex font-medium">
+          <div className="hidden lg:flex font-medium">
             <PrimaryButton
               text="Get started"
               onClick={() => {
                 window.location.href = "/get-started";
               }}
             />
+            <OutlineButton
+              text="Drop your Query"
+              onClick={() => {
+                window.location.href = "https://calendly.com/edgenus_sales";
+              }}
+              className="ml-3"
+            />
           </div>
         </>
       ) : null}
       {isOpen && (
-        <div className="md:hidden font-medium rounded-b-md mt-2 py-3 px-10 space-y-2 text-black absolute flex flex-col left-0 -bottom-[10rem] z-50 w-full overflow-visible bg-white">
+        <div className="lg:hidden font-medium rounded-b-md mt-2 py-3 px-20 space-y-2 text-black absolute flex flex-col left-0 -bottom-[13rem] z-50 w-full overflow-visible bg-white">
           <div>
             <a href="#modules" onClick={toggleMenu}>
               Modules
@@ -86,6 +94,14 @@ const Header = ({ showModules = false }) => {
               text="Get started"
               onClick={() => {
                 window.location.href = "/get-started";
+              }}
+            />
+          </div>
+          <div>
+            <OutlineButton
+              text="Drop your Query"
+              onClick={() => {
+                window.location.href = "https://calendly.com/edgenus_sales";
               }}
             />
           </div>

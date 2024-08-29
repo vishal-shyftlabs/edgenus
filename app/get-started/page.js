@@ -24,6 +24,9 @@ const page = (props) => {
           <div className="text-24 sm:text-28 font-bold">Business Info</div>
 
           <div className="text-label text-lg sm:text-24 mt-10">Identity</div>
+          <Input placeholder="Name" required className="flex" />
+          <Input placeholder="Email" required className="flex" />
+          <Input placeholder="Profession" required className="flex" />
           <Input placeholder="Business Name*" required className="flex" />
           <Input placeholder="Business Description" className="flex" />
 
@@ -35,14 +38,14 @@ const page = (props) => {
           </div>
 
           <div className="text-label text-lg sm:text-24 mt-10">Address</div>
-          <Input placeholder="Address line 1*" required className="flex" />
-          <Input placeholder="Address line 2*" required className="flex" />
-          <Input placeholder="Pin code*" required className="flex" />
+          <Input placeholder="Address line 1" className="flex" />
+          <Input placeholder="Address line 2" className="flex" />
+          <Input placeholder="Pin code" className="flex" />
           <div className="flex gap-x-6">
-            <Input placeholder="City*" required className="" />
-            <Input placeholder="State*" required className="" />
+            <Input placeholder="City" className="" />
+            <Input placeholder="State" className="" />
           </div>
-          <Input placeholder="Country*" required className="flex" />
+          <Input placeholder="Country" className="flex" />
 
           <div className="text-label text-lg sm:text-24 mt-10">
             Contact Info
