@@ -5,6 +5,7 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Input from "../components/Input";
 import Stepper from "../components/Stepper";
+import TextArea from "../components/TextArea";
 
 const page = (props) => {
   const [currentStep, setCurrentStep] = React.useState(0);
@@ -28,7 +29,7 @@ const page = (props) => {
           <Input placeholder="Email" required className="flex" />
           <Input placeholder="Profession" required className="flex" />
           <Input placeholder="Business Name*" required className="flex" />
-          <Input placeholder="Business Description" className="flex" />
+          <TextArea placeholder="Business Description" className="flex" />
 
           <div className="absolute right-28 top-[26rem]">
             <Stepper
