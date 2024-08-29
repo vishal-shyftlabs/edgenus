@@ -13,7 +13,7 @@ const page = (props) => {
   const [currentStep, setCurrentStep] = React.useState(0);
   const NUMBER_OF_STEPS = 5;
   const SCRIPT_URL =
-    "https://script.google.com/macros/s/AKfycbyKmd4xJQFcKY6gsJXVIXN0ZXSj8eZ3iLnQDC5PH2OnXJweUjF29EflWbOACaBjpbJFCA/exec";
+    "https://script.google.com/macros/s/AKfycbwFpNoKGLqFthEF4Fj7xDG9JUcm5Kn6gHbAO822TokGEMvK85KjYtzgUZ90xrZfJPSRNw/exec";
   return (
     <>
       <Header />
@@ -58,7 +58,11 @@ const page = (props) => {
             onClick={(e) => {
               e.preventDefault();
               axios
-                .post(SCRIPT_URL, { name: "Deepa", email: "blah" })
+                .post(SCRIPT_URL, {
+                  name: "Deepa",
+                  email: "blah",
+                  message: "some",
+                })
                 .then((response) => {
                   console.log("Success!", response.data);
                 })
