@@ -17,7 +17,7 @@ const page = (props) => {
   return (
     <>
       <Header />
-      <div className="pt-32 px-8 sm:px-20 w-[90%] lg:w-[60%] mx-auto mb-20">
+      <div className="pt-32 px-8 sm:px-20 w-[90%] lg:w-[60%] mx-auto mb-20 min-h-[80vh]">
         <div className="text-32 sm:text-44 font-extrabold">
           Setup your business with
           <span className="text-primary ml-3">BizzGenus</span>
