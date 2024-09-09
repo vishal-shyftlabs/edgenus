@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
@@ -14,6 +14,23 @@ import TeamSetup from "../components/TeamSetup";
 
 const page = (props) => {
   const [currentStep, setCurrentStep] = React.useState(1);
+  const [name, setName] = useState("");
+  const [businessEmail, setBusinessEmail] = useState("");
+  const [profession, setProfession] = useState("");
+  const [businessDescription, setBusinessDescription] = useState("");
+  const [line1, setLine1] = useState("");
+  const [line2, setLine2] = useState("");
+  const [postcode, setPostcode] = useState("");
+  const [city, setCity] = useState("");
+  const [state, setState] = useState("");
+  const [country, setCountry] = useState("");
+  const [email, setEmail] = useState("");
+  const [businessContact, setBusinessContact] = useState("");
+  const [hexColor, setHexColor] = useState("000000");
+  const [members, setMembers] = useState([{ name: "", role: "" }]);
+  const [image, setImage] = useState(null);
+  const [businessName, setBusinessName] = useState("");
+  const [portfolioLink, setPortfolioLink] = useState("");
   return (
     <>
       <Header />
@@ -29,15 +46,49 @@ const page = (props) => {
           <BusinessInfo
             setCurrentStep={setCurrentStep}
             currentStep={currentStep}
+            name={name}
+            setName={setName}
+            businessName={businessName}
+            setBusinessName={setBusinessName}
+            businessEmail={businessEmail}
+            setBusinessEmail={setBusinessEmail}
+            businessDescription={businessDescription}
+            setBusinessDescription={setBusinessDescription}
+            profession={profession}
+            setProfession={setProfession}
+            line1={line1}
+            setLine1={setLine1}
+            line2={line2}
+            setLine2={setLine2}
+            city={city}
+            setCity={setCity}
+            state={state}
+            setState={setState}
+            postcode={postcode}
+            setPostcode={setPostcode}
+            country={country}
+            setCountry={setCountry}
+            email={email}
+            setEmail={setEmail}
+            businessContact={businessContact}
+            setBusinessContact={setBusinessContact}
           />
           <BrandingInfo
             setCurrentStep={setCurrentStep}
             currentStep={currentStep}
+            hexColor={hexColor}
+            setHexColor={setHexColor}
+            image={image}
+            setImage={setImage}
+            portfolioLink={portfolioLink}
+            setPortfolioLink={setPortfolioLink}
           />
           <TeamSetup
             currentStep={currentStep}
             setCurrentStep={setCurrentStep}
             handleSubmit={() => {}}
+            members={members}
+            setMembers={setMembers}
           />
 
           {/* <PrimaryButton

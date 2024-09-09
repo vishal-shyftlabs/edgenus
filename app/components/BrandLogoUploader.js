@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 
-const BrandLogoUploader = () => {
-  const [image, setImage] = useState(null);
-
+const BrandLogoUploader = ({ image, setImage }) => {
   const handleImageChange = (e) => {
     const file = e.target.files[0];
     if (file) {

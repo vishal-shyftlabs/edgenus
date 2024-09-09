@@ -6,8 +6,16 @@ import BrandLogoUploader from "./BrandLogoUploader";
 import DynamicInputFields from "./DynamicInputFields";
 import PrimaryButton from "./PrimaryButton";
 
-const BrandingInfo = ({ currentStep, setCurrentStep }) => {
-  const [hexColor, setHexColor] = useState("000000");
+const BrandingInfo = ({
+  currentStep,
+  setCurrentStep,
+  hexColor,
+  setHexColor,
+  image,
+  setImage,
+  portfolioLink,
+  setPortfolioLink,
+}) => {
   return (
     currentStep === 2 && (
       <div>
@@ -24,7 +32,7 @@ const BrandingInfo = ({ currentStep, setCurrentStep }) => {
         <div className="text-label text-lg sm:text-24 mt-10">
           Upload Brand Logo
         </div>
-        <BrandLogoUploader />
+        <BrandLogoUploader image={image} setImage={setImage} />
         <div className="text-label text-lg sm:text-24 mt-10">
           Select Brand Colours
         </div>
@@ -40,16 +48,35 @@ const BrandingInfo = ({ currentStep, setCurrentStep }) => {
           />
         </Input>
         <div className="flex gap-x-3">
-          <div className={`h-10 w-10 rounded-md shadow-lg bg-[#6C63FF]`} />
-          <div className={`h-10 w-10 rounded-md shadow-lg bg-[#D7D5FF]`} />
-          <div className={`h-10 w-10 rounded-md shadow-lg bg-[#FFD037]`} />
-          <div className={`h-10 w-10 rounded-md shadow-lg bg-[#FFFFFF]`} />
-          <div className={`h-10 w-10 rounded-md shadow-lg bg-[#565987]`} />
+          <div
+            className={`h-10 w-10 rounded-md shadow-lg bg-[#6C63FF]`}
+            onClick={() => setHexColor("6C63FF")}
+          />
+          <div
+            className={`h-10 w-10 rounded-md shadow-lg bg-[#D7D5FF]`}
+            onClick={() => setHexColor("D7D5FF")}
+          />
+          <div
+            className={`h-10 w-10 rounded-md shadow-lg bg-[#FFD037]`}
+            onClick={() => setHexColor("FFD037")}
+          />
+          <div
+            className={`h-10 w-10 rounded-md shadow-lg bg-[#FFFFFF]`}
+            onClick={() => setHexColor("FFFFFF")}
+          />
+          <div
+            className={`h-10 w-10 rounded-md shadow-lg bg-[#565987]`}
+            onClick={() => setHexColor("565987")}
+          />
         </div>
         <div className="text-label text-lg sm:text-24 mt-10">
           Upload brand Portfolio
         </div>
-        <Input placeholder="Paste Portfolio Link" />
+        <Input
+          placeholder="Paste Portfolio Link"
+          value={portfolioLink}
+          onChange={(e) => setPortfolioLink(e.target.value)}
+        />
         <span className="text-muted"> Or</span>
         <DragAndDrop />
         <div className="text-label text-lg sm:text-24 mt-10">Social Media</div>

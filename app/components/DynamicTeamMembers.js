@@ -1,9 +1,7 @@
 import React, { useState } from "react";
 import Input from "./Input";
 
-const DynamicTeamMembers = () => {
-  const [members, setMembers] = useState([{ name: "", role: "" }]);
-
+const DynamicTeamMembers = ({ members, setMembers }) => {
   // Function to handle adding a new member input row
   const handleAddMember = () => {
     setMembers([...members, { name: "", role: "" }]);
