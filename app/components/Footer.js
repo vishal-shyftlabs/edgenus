@@ -30,17 +30,17 @@ const Footer = (props) => {
           <div className="sm:text-lg font-medium">Contact</div>
           <div className="flex items-center mt-3 text-sm sm:text-14">
             <img src="phone.png" className="h-5" />{" "}
-            <span className="ml-2">
-              <a href="tel:+91 92661 47446">+91 92661 47446</a>,{" "}
-              <a href="tel:+91-9810771425">+91-9810771425</a> (India)
+            <span className="ml-2 mb-2">
+              <a href="tel:+91 92661 47446">+91 92661 47446</a>{" "}
+              {/* <a href="tel:+91-9810771425">+91-9810771425</a> (India) */}
             </span>
           </div>
-          <div className="flex items-center my-3 text-sm sm:text-14">
+          {/* <div className="flex items-center my-3 text-sm sm:text-14">
             <img src="phone.png" className="h-5" />{" "}
             <span className="ml-2">
               <a href="tel:+352-661839999">+352-661839999</a> (Europe)
             </span>
-          </div>
+          </div> */}
           <div className="flex text-sm sm:text-14">
             <a href="mailto:reachus@edgenus.com" className="flex items-center">
               <img src="mail.png" className="h-5" />{" "}
