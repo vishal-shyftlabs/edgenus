@@ -31,6 +31,12 @@ const page = (props) => {
   const [image, setImage] = useState(null);
   const [businessName, setBusinessName] = useState("");
   const [portfolioLink, setPortfolioLink] = useState("");
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log();
+  };
+  const SCRIPT_URL =
+    "https://script.google.com/macros/s/AKfycbwFpNoKGLqFthEF4Fj7xDG9JUcm5Kn6gHbAO822TokGEMvK85KjYtzgUZ90xrZfJPSRNw/exec";
   return (
     <>
       <Header />
@@ -86,12 +92,12 @@ const page = (props) => {
           <TeamSetup
             currentStep={currentStep}
             setCurrentStep={setCurrentStep}
-            handleSubmit={() => {}}
+            handleSubmit={handleSubmit}
             members={members}
             setMembers={setMembers}
           />
 
-          {/* <PrimaryButton
+          <PrimaryButton
             onClick={(e) => {
               e.preventDefault();
               axios
@@ -108,7 +114,7 @@ const page = (props) => {
                 });
             }}
             text="Submit"
-          /> */}
+          />
         </form>
       </div>
       <Footer />
