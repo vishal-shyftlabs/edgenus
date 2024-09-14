@@ -31,9 +31,15 @@ const page = (props) => {
   const [image, setImage] = useState(null);
   const [businessName, setBusinessName] = useState("");
   const [portfolioLink, setPortfolioLink] = useState("");
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log();
+    const response = await fetch("http://localhost:3000/submit", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json", // Set Content-Type to JSON
+      },
+      body: JSON.stringify(formData), // Convert the form data to JSON
+    });
   };
   const SCRIPT_URL =
     "https://script.google.com/macros/s/AKfycbwFpNoKGLqFthEF4Fj7xDG9JUcm5Kn6gHbAO822TokGEMvK85KjYtzgUZ90xrZfJPSRNw/exec";
@@ -97,15 +103,11 @@ const page = (props) => {
             setMembers={setMembers}
           />
 
-          <PrimaryButton
+          {/* <PrimaryButton
             onClick={(e) => {
               e.preventDefault();
               axios
-                .post(SCRIPT_URL, {
-                  name: "Deepa",
-                  email: "blah",
-                  message: "some",
-                })
+                .post("/submit")
                 .then((response) => {
                   console.log("Success!", response.data);
                 })
@@ -114,7 +116,7 @@ const page = (props) => {
                 });
             }}
             text="Submit"
-          />
+          /> */}
         </form>
       </div>
       <Footer />
