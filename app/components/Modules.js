@@ -242,7 +242,7 @@ const Modules = (props) => {
       <div className="text-24 md:text-32 font-semibold">
         Modules in our Business automation suite
       </div>
-      <div className="flex flex-wrap gap-x-6 justify-center my-6">
+      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-6 justify-center my-6">
         {modules.map((module, i) => (
           <div className="my-6" key={`module-${i}`}>
             <Card
@@ -252,10 +252,13 @@ const Modules = (props) => {
               idx={i}
               activeId={activeId}
               setActiveId={setActiveId}
-              className="w-[312px] h-[352px] md:w-[504px]"
+              className="lg:min-w-[290px] lg:max-w-[504px] h-[379px] md:h-[339px]"
             >
               <div className="items-center px-auto mx-auto">
-                <img src={module.imgPath} className="h-[194px]" />
+                <img
+                  src={module.imgPath}
+                  className="h-[194px] md:h-[154px] mt-3"
+                />
               </div>
             </Card>
           </div>

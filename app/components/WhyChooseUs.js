@@ -26,7 +26,7 @@ const WhyChooseUs = (props) => {
       <div className="text-24 sm:text-32 font-semibold text-center">
         Why choose us?
       </div>
-      <div className="flex flex-wrap gap-x-auto sm:gap-x-6 items-center justify-center my-6">
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-x-auto sm:gap-x-6 items-center justify-center my-6">
         {modules.map((module, i) => (
           <div className="my-6" key={`module-${i}`}>
             <Card
@@ -34,7 +34,7 @@ const WhyChooseUs = (props) => {
               content={module.content}
               className={`${
                 i % 2 == 0 ? "bg-secondary" : "bg-tertiary"
-              } w-[312px] md:h-[262px] md:w-[504px]`}
+              } md:h-[330px] lg:h-[370px] pre-xl:h-[300px]`}
               data={module}
               idx={i}
             />
