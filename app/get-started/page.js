@@ -31,18 +31,67 @@ const page = (props) => {
   const [image, setImage] = useState(null);
   const [businessName, setBusinessName] = useState("");
   const [portfolioLink, setPortfolioLink] = useState("");
+
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const response = await fetch("http://localhost:3000/submit", {
+    const response = await fetch("http://localhost:3001/proxy", {
       method: "POST",
       headers: {
         "Content-Type": "application/json", // Set Content-Type to JSON
       },
-      body: JSON.stringify(formData), // Convert the form data to JSON
+      body: JSON.stringify({
+        name: "Dee",
+        businessEmail: "edgenus@gmail.com",
+        profession: "Creator",
+        businessDescription: "",
+        line1: "2023",
+        line2: "Baker Street",
+        postcode: "234567",
+        state: "",
+        country: "UK",
+        email: "edgenusbusiness.com",
+        city: "London",
+        businessContact: "91763877888",
+        hexColor: "D7D5FF",
+        businessName: "Edgenus",
+        portfolioLink: "www.example.com",
+      }),
     });
+
+    // const data = await response.json();
+
+    // const response = await fetch("/api/onboard", {
+    //   method: "POST",
+    //   headers: {
+    //     "Content-Type": "application/json", // Set Content-Type to JSON
+    //   },
+    //   body: JSON.stringify({
+    //     name: "Vishal",
+    //     email: "vishal@example.com",
+    //     message: "No!",
+    //   }),
+    // name,
+    // businessEmail,
+    // profession,
+    // businessDescription,
+    // line1,
+    // line2,
+    // postcode,
+    // state,
+    // country,
+    // email,
+    // city,
+    // state,
+    // businessContact,
+    // hexColor,
+    // members,
+    // image,
+    // businessName,
+    // portfolioLink,
+    // Convert the form data to JSON
+    // });
   };
-  const SCRIPT_URL =
-    "https://script.google.com/macros/s/AKfycbwFpNoKGLqFthEF4Fj7xDG9JUcm5Kn6gHbAO822TokGEMvK85KjYtzgUZ90xrZfJPSRNw/exec";
+
   return (
     <>
       <Header />
