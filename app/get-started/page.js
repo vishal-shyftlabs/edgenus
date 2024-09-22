@@ -34,28 +34,27 @@ const page = (props) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("calling submit");
     const response = await fetch("http://localhost:3001/proxy", {
       method: "POST",
       headers: {
         "Content-Type": "application/json", // Set Content-Type to JSON
       },
       body: JSON.stringify({
-        name,
-        businessEmail,
-        profession,
-        businessDescription,
-        line1,
-        line2,
-        postcode,
-        state,
-        country,
-        email,
-        city,
-        businessContact,
-        hexColor,
-        businessName,
-        portfolioLink,
+        name: "Dee",
+        businessEmail: "edgenus@gmail.com",
+        profession: "Creator",
+        businessDescription: "",
+        line1: "2023",
+        line2: "Baker Street",
+        postcode: "234567",
+        state: "",
+        country: "UK",
+        email: "edgenusbusiness.com",
+        city: "London",
+        businessContact: "91763877888",
+        hexColor: "D7D5FF",
+        businessName: "Edgenus",
+        portfolioLink: "www.example.com",
       }),
     });
 
