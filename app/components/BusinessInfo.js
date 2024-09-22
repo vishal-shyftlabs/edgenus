@@ -36,8 +36,6 @@ const BusinessInfo = ({
   setEmail,
 }) => {
   const NUMBER_OF_STEPS = 5;
-  const SCRIPT_URL =
-    "https://script.google.com/macros/s/AKfycbwFpNoKGLqFthEF4Fj7xDG9JUcm5Kn6gHbAO822TokGEMvK85KjYtzgUZ90xrZfJPSRNw/exec";
   return (
     currentStep === 1 && (
       <div>

@@ -9,6 +9,8 @@ const Input = ({
   className = "",
   onChange = () => {},
   children = <></>,
+  style = {},
+  name = "",
 }) => {
   return (
     <div className="relative flex">
@@ -19,6 +21,8 @@ const Input = ({
         placeholder={placeholder}
         required={required}
         className={`bg-input p-3 sm:p-4 sm:text-24 w-full rounded-md ${className} my-5`}
+        style={style}
+        name={name}
       />
       {children}
     </div>

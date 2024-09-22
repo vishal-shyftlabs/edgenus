@@ -4,22 +4,22 @@ import Input from "./Input";
 const DynamicTeamMembers = ({ members, setMembers }) => {
   // Function to handle adding a new member input row
   const handleAddMember = () => {
-    setMembers([...members, { name: "", role: "" }]);
+    setMembers((prevMembers) => [...prevMembers, { name: "", role: "" }]);
   };
 
-  // Function to handle removing a member input row
   const handleRemoveMember = (index) => {
-    const newMembers = [...members];
-    newMembers.splice(index, 1);
-    setMembers(newMembers);
+    setMembers((prevMembers) => prevMembers.filter((_, i) => i !== index));
   };
 
-  // Function to handle input change
   const handleInputChange = (index, event) => {
     const { name, value } = event.target;
-    const newMembers = [...members];
-    newMembers[index][name] = value;
-    setMembers(newMembers);
+    console.log(name, value, index);
+    setMembers((prevMembers) => {
+      const updatedMembers = [...prevMembers];
+      updatedMembers[index][name] = value;
+      console.log(updatedMembers);
+      return updatedMembers;
+    });
   };
 
   return (

@@ -3,7 +3,7 @@ import fetch from "node-fetch";
 const app = express();
 const port = 3001;
 
-app.use(express.json({ limit: "50mb" }));
+app.use(express.json({ limit: "100mb" }));
 
 // Middleware to handle CORS
 app.use((req, res, next) => {
@@ -17,7 +17,7 @@ app.use((req, res, next) => {
 app.post("/proxy", async (req, res) => {
   try {
     const response = await fetch(
-      "https://script.google.com/macros/s/AKfycbxC1D52EkA3OQ0HVBcotVyQ7YUAii-mpFDs5doOPAq4XrN1Ti8SnXVgj4_U7bgZbOkb3g/exec",
+      "https://script.google.com/macros/s/AKfycbxzFj0yDKaMkyT9SitTTJwJLZZE1115_2eG18A06FDexm8232aUsxbeXJnwJOZPR7J0hQ/exec",
       {
         // Replace with your Google Apps Script Web App URL
         method: "POST",
