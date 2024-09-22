@@ -16,7 +16,6 @@ app.use((req, res, next) => {
 // Proxy endpoint
 app.post("/proxy", async (req, res) => {
   try {
-    console.log(req.body);
     const response = await fetch(
       "https://script.google.com/macros/s/AKfycbxC1D52EkA3OQ0HVBcotVyQ7YUAii-mpFDs5doOPAq4XrN1Ti8SnXVgj4_U7bgZbOkb3g/exec",
       {

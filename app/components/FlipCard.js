@@ -4,7 +4,6 @@ import Link from "next/link";
 import { ArrowRight } from "react-bootstrap-icons";
 
 const FlipCard = ({ data }) => {
-  console.log(data);
   return (
     <div className="rounded-lg">
       <div className="flip-card-front">
