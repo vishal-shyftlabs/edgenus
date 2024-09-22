@@ -13,6 +13,7 @@
     "axios": "^1.7.5",
     "express": "^4.21.0",
     "next": "^14.2.5",
+    "node-fetch": "^3.3.2",
     "react": "^18",
     "react-bootstrap-icons": "^1.11.4",
     "react-dom": "^18"
@@ -23,5 +24,6 @@
     "postcss": "^8",
     "tailwindcss": "^3.4.1"
   },
-  "proxy": "https://script.google.com/macros/s/AKfycbzCwyhMRYLdRadywAJ4Rqhd_1DUDnbauNDv7D_6Z3nu/dev"
+  "proxy": "https://script.google.com/macros/s/AKfycbzCwyhMRYLdRadywAJ4Rqhd_1DUDnbauNDv7D_6Z3nu/dev",
+  "type": "module"
 }

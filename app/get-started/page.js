@@ -34,6 +34,7 @@ const page = (props) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    console.log("calling submit");
     const response = await fetch("http://localhost:3001/proxy", {
       method: "POST",
       headers: {
