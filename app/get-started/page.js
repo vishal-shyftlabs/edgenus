@@ -12,6 +12,7 @@ import BusinessInfo from "../components/BusinessInfo";
 import BrandingInfo from "../components/BrandingInfo";
 import TeamSetup from "../components/TeamSetup";
 import Modal from "../components/Modal";
+import SpinnerOverlay from "../components/Spinner";
 
 const page = (props) => {
   const [currentStep, setCurrentStep] = React.useState(1);
@@ -151,6 +152,7 @@ const page = (props) => {
           </Modal>
         </form>
       </div>
+      <SpinnerOverlay isLoading={isLoading} />
       <Footer />
     </>
   );
