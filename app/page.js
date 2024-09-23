@@ -1,4 +1,6 @@
 "use client";
+import { SpeedInsights } from "@vercel/speed-insights/next"
+
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
