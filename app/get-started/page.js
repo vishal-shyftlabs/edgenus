@@ -11,6 +11,7 @@ import axios from "axios";
 import BusinessInfo from "../components/BusinessInfo";
 import BrandingInfo from "../components/BrandingInfo";
 import TeamSetup from "../components/TeamSetup";
+import Modal from "../components/Modal";
 
 const page = (props) => {
   const [currentStep, setCurrentStep] = React.useState(1);
@@ -31,10 +32,15 @@ const page = (props) => {
   const [image, setImage] = useState(null);
   const [businessName, setBusinessName] = useState("");
   const [portfolioLink, setPortfolioLink] = useState("");
+  const [isModalOpen, setModalOpen] = useState(false);
+  const [msg, setMsg] = useState(null);
+  const [modalTitle, setModalTitle] = useState(null);
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const response = await fetch("http://localhost:3001/proxy", {
+    setIsLoading(true);
+    const response = await fetch("/api/proxy", {
       method: "POST",
       headers: {
         "Content-Type": "application/json", // Set Content-Type to JSON
@@ -58,6 +64,11 @@ const page = (props) => {
         members,
       }),
     });
+    if (response.status === 200) {
+      setIsLoading(false);
+      setMsg("Thank you for submitting your details. We will get back to you.");
+      setModalOpen(true);
+    }
   };
 
   return (
@@ -119,21 +130,25 @@ const page = (props) => {
             members={members}
             setMembers={setMembers}
           />
-
-          {/* <PrimaryButton
-            onClick={(e) => {
-              e.preventDefault();
-              axios
-                .post("/submit")
-                .then((response) => {
-                  console.log("Success!", response.data);
-                })
-                .catch((error) => {
-                  console.error("Error!", error.message);
-                });
+          <Modal
+            isOpen={isModalOpen}
+            onClose={() => {
+              setModalOpen(false);
+              window.location.href = "/";
             }}
-            text="Submit"
-          /> */}
+          >
+            <h2 className="text-xl font-semibold mb-4">{modalTitle}</h2>
+            <p className="mb-4">{msg}</p>
+            <button
+              onClick={() => {
+                setModalOpen(false);
+                window.location.href = "/";
+              }}
+              className="px-4 py-2 bg-primary text-white rounded"
+            >
+              Ok
+            </button>
+          </Modal>
         </form>
       </div>
       <Footer />
