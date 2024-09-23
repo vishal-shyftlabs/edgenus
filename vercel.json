@@ -1,0 +1,18 @@
+{
+    "projects": [
+        {
+            "src": "package.json",
+            "use": "@vercel/next" 
+        },
+        {
+            "src": "proxy/server.js", 
+            "use": "@vercel/node"
+        }
+    ],
+    "rewrites": [
+        {
+            "source": "/proxy/(.*)", 
+            "destination": "http://localhost:3001/proxy"
+        }
+    ]
+}
