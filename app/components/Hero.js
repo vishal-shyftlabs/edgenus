@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import PrimaryButton from "./PrimaryButton";
+import OutlineButton from "./OutlineButton";
 
 const Hero = (props) => {
   return (
@@ -31,6 +32,13 @@ const Hero = (props) => {
               onClick={() => {
                 window.location.href = "/get-started";
               }}
+            />
+            <OutlineButton
+              text="Drop your Query"
+              onClick={() => {
+                window.location.href = "https://calendly.com/edgenus_sales";
+              }}
+              className="ml-3"
             />
           </div>
         </div>
