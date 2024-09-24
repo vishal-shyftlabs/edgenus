@@ -15,6 +15,8 @@ const BrandingInfo = ({
   setImage,
   portfolioLink,
   setPortfolioLink,
+  socialMediaLinks,
+  setSocialMediaLinks,
 }) => {
   return (
     currentStep === 2 && (
@@ -80,7 +82,10 @@ const BrandingInfo = ({
         <span className="text-muted"> Or</span>
         <DragAndDrop />
         <div className="text-label text-lg sm:text-24 mt-10">Social Media</div>
-        <DynamicInputFields />
+        <DynamicInputFields
+          inputFields={socialMediaLinks}
+          setInputFields={setSocialMediaLinks}
+        />
         <PrimaryButton
           text="Next"
           className="w-full text-center text-20 mt-5"

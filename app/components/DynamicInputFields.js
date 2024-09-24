@@ -1,9 +1,7 @@
 import React, { useState } from "react";
 import Input from "./Input";
 
-const DynamicInputFields = () => {
-  const [inputFields, setInputFields] = useState([{ id: 1, value: "" }]);
-
+const DynamicInputFields = ({ inputFields, setInputFields }) => {
   // Function to handle adding new input fields
   const handleAddField = () => {
     setInputFields([...inputFields, { id: inputFields.length + 1, value: "" }]);

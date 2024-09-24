@@ -37,6 +37,9 @@ const page = (props) => {
   const [msg, setMsg] = useState(null);
   const [modalTitle, setModalTitle] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
+  const [socialMediaLinks, setSocialMediaLinks] = useState([
+    { id: 1, value: "" },
+  ]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -62,6 +65,7 @@ const page = (props) => {
         hexColor,
         businessName,
         portfolioLink,
+        socialMediaLinks,
         members,
       }),
     });
@@ -123,6 +127,8 @@ const page = (props) => {
             setImage={setImage}
             portfolioLink={portfolioLink}
             setPortfolioLink={setPortfolioLink}
+            socialMediaLinks={socialMediaLinks}
+            setSocialMediaLinks={setSocialMediaLinks}
           />
           <TeamSetup
             currentStep={currentStep}
