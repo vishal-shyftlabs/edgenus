@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 const LookingOut = (props) => {
   return (
-    <div className="bg-tertiary sm:px-20 px-8 py-20">
+    <div className="bg-tertiary sm:px-20 px-8 py-20" id="customer">
       <div className="text-24 sm:text-32 font-semibold text-center">
         Who are we looking out for?
       </div>
