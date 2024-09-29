@@ -48,6 +48,9 @@ const Header = ({ showModules = false }) => {
               <a href="#modules">Modules</a>
             </div>
             <div>
+              <a href="#portfolio">Portfolio</a>
+            </div>
+            <div>
               <a href="#customer">Customer</a>
             </div>
             <div>
@@ -72,10 +75,15 @@ const Header = ({ showModules = false }) => {
         </>
       ) : null}
       {isOpen && (
-        <div className="lg:hidden font-medium rounded-b-md mt-2 py-3 px-20 space-y-2 text-black absolute flex flex-col left-0 -bottom-[13rem] z-50 w-full overflow-visible bg-white">
+        <div className="lg:hidden font-medium rounded-b-md mt-2 py-3 px-20 space-y-2 text-black absolute flex flex-col left-0 -bottom-[15rem] z-50 w-full overflow-visible bg-white">
           <div>
             <a href="#modules" onClick={toggleMenu}>
               Modules
+            </a>
+          </div>
+          <div>
+            <a href="#portfolio" onClick={toggleMenu}>
+              Portfolio
             </a>
           </div>
           <div>

@@ -244,7 +244,7 @@ const Modules = (props) => {
       </div>
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-6 justify-center my-6">
         {modules.map((module, i) => (
-          <div className="my-6" key={`module-${i}`}>
+          <div className="sm:my-6" key={`module-${i}`}>
             <Card
               data={module}
               title={module.title}
