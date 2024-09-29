@@ -25,7 +25,7 @@ export default function Carousel() {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const nextSlide = () => {
-    if (window.innerWidth < 768) {
+    if (typeof window !== "undefined" && window.innerWidth < 768) {
       // Mobile screen
       if (currentIndex < items.length - 1) {
         setCurrentIndex(currentIndex + 1);
@@ -52,7 +52,7 @@ export default function Carousel() {
           className="flex transition-transform duration-500"
           style={{
             transform:
-              window.innerWidth < 768
+              typeof window !== "undefined" && window.innerWidth < 768
                 ? `translateX(-${currentIndex * 100}%)` // For mobile (full width)
                 : `translateX(-${currentIndex * 50}%)`, // For desktop (half width)
           }}
