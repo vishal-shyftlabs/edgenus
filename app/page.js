@@ -15,10 +15,12 @@ export default function Home() {
       <Header showModules />
       <Hero />
       <Modules />
-      <div className="sm:h-[100vh] md:px-20 px-8 py-20" id="portfolio">
-        <div className="text-center mb-5">
-          <div className="text-32 font-semibold">Our Portfolio</div>
-          <div className="text-24 font-medium">Clients we have worked with</div>
+      <div className="sm:h-[100vh] md:px-20 px-8 pb-20 pt-10" id="portfolio">
+        <div className="text-center mb-10">
+          <div className="text-24 md:text-32 font-semibold">Our Portfolio</div>
+          <div className="text-22 md:text-24 font-medium">
+            Clients we have worked with
+          </div>
         </div>
         <Carousel />
       </div>

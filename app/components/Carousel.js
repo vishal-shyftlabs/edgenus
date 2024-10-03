@@ -3,13 +3,15 @@ import { ChevronLeft, ChevronRight } from "react-bootstrap-icons";
 
 const items = [
   {
-    id: 2,
+    id: 1,
     imageUrl: "/testimonial1.png",
     title: "Chats & Wraps",
-    subTitle: "",
+    subTitle: null,
     description:
       "Working with Edgenus has been a game-changer for our brand. They didn’t just enhance our social presence; they built a solid portfolio and amplified our brand value. The buzz they created brought in more leads than we ever expected. Their hands-on, creative approach perfectly aligned with our vision. We couldn't have asked for a better partner in our growth journey!",
   },
+  // You can add more items to test
+  // { id: 2, imageUrl: "/testimonial2.png", title: "Another Title", description: "Another description" },
 ];
 
 export default function Carousel() {
@@ -40,7 +42,9 @@ export default function Carousel() {
       {/* Carousel Items */}
       <div className="overflow-hidden">
         <div
-          className="flex transition-transform duration-500"
+          className={`flex transition-transform duration-500 ${
+            items.length === 1 ? "justify-center" : "justify-start"
+          }`}
           style={{
             transform:
               typeof window !== "undefined" && window.innerWidth < 768
@@ -48,26 +52,41 @@ export default function Carousel() {
                 : `translateX(-${currentIndex * 50}%)`, // For desktop (half width)
           }}
         >
-          {items.map((item) => (
-            <div key={item.id} className="w-full md:w-1/2 md:p-4 flex-shrink-0">
-              <img
-                src={item.imageUrl}
-                alt={item.description}
-                className="w-full h-2/5 md:h-3/5 object-cover rounded-lg"
-              />
-              <div className="overflow-scroll">
-                <p className="text-22 md:text-24 xl:text-44 font-semibold mt-3">
-                  {item.title}
-                </p>
-                <p className="text-normal md:text-22 xl:text-28 font-semibold">
-                  {item.subTitle}
-                </p>
-                <p className="mt-2 text-normal md:text-22 xl:text-28 font-medium text-[#3F3D56CC]">
-                  {item.description}
-                </p>
+          <div
+            className={`flex ${
+              items.length === 1 ? "justify-center" : "justify-start"
+            } overflow-x-auto`}
+          >
+            {items.map((item, index) => (
+              <div
+                key={item.id}
+                className={`w-full ${
+                  items.length === 1 ? "mx-auto" : "md:w-1/2 md:p-4"
+                } flex-shrink-0`}
+                style={{
+                  minWidth: items.length === 1 ? "auto" : "50%",
+                  justifyContent: items.length === 1 ? "center" : "start",
+                }}
+              >
+                <img
+                  src={item.imageUrl}
+                  alt={item.description}
+                  className="w-full max-w-[504px] object-cover rounded-lg bg-black mx-auto"
+                />
+                <div className="overflow-scroll max-w-[504px]">
+                  <p className="text-22 font-semibold mt-3">{item.title}</p>
+                  {item.subTitle && (
+                    <p className="text-normal md:text-22 xl:text-28 font-semibold">
+                      {item.subTitle}
+                    </p>
+                  )}
+                  <p className="mt-2 text-18 font-medium text-[#3F3D56CC]">
+                    {item.description}
+                  </p>
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
 
@@ -75,17 +94,17 @@ export default function Carousel() {
       {currentIndex > 0 && (
         <button
           onClick={prevSlide}
-          className="absolute top-1/2 -left-10  p-2 rounded-full -translate-y-1/2 "
+          className="absolute top-1/2 -left-10 p-2 rounded-full -translate-y-1/2"
         >
           <ChevronLeft className="text-[3rem]" />
         </button>
       )}
 
       {/* Right Arrow Button */}
-      {currentIndex !== items.length && (
+      {currentIndex !== items.length - 1 && (
         <button
           onClick={nextSlide}
-          className="absolute top-1/2 -right-10  p-2 rounded-full -translate-y-1/2"
+          className="absolute top-1/2 -right-10 p-2 rounded-full -translate-y-1/2"
         >
           <ChevronRight className="text-[3rem]" />
         </button>

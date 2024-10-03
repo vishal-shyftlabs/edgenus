@@ -242,7 +242,7 @@ const Modules = (props) => {
       <div className="text-24 md:text-32 font-semibold">
         Modules in our Business automation suite
       </div>
-      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-6 justify-center my-6">
+      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 justify-center my-6">
         {modules.map((module, i) => (
           <div className="sm:my-6" key={`module-${i}`}>
             <Card
