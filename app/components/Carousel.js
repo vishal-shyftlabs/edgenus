@@ -3,21 +3,12 @@ import { ChevronLeft, ChevronRight } from "react-bootstrap-icons";
 
 const items = [
   {
-    id: 1,
-    imageUrl: "/portfolio1.png",
-    title: "Artisan Roots",
-    subTitle:
-      "A startup selling handmade, sustainable home décor and accessories.",
-    description:
-      "Objective: Create a compelling brand identity to reflect the company’s eco-friendly values and attract a modern, socially conscious audience. ",
-  },
-  {
     id: 2,
-    imageUrl: "/portfolio2.png",
-    title: "Craftsman Apparel",
-    subTitle: "A bespoke clothing brand for men.",
+    imageUrl: "/testimonial1.png",
+    title: "Chats & Wraps",
+    subTitle: "",
     description:
-      "Objective: Help the company transition from a traditional brick-and-mortar store to a robust online presence with a fully integrated digital marketing strategy.",
+      "Working with Edgenus has been a game-changer for our brand. They didn’t just enhance our social presence; they built a solid portfolio and amplified our brand value. The buzz they created brought in more leads than we ever expected. Their hands-on, creative approach perfectly aligned with our vision. We couldn't have asked for a better partner in our growth journey!",
   },
 ];
 
