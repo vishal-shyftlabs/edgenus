@@ -15,7 +15,42 @@ export default function Home() {
       <Header showModules />
       <Hero />
       <Modules />
-      <div className="sm:h-[100vh] md:px-20 px-8 pb-20 pt-10" id="portfolio">
+      <div className="md:px-20 px-8 pb-20 pt-10" id="portfolio">
+        <div className="text-center mb-10">
+          <div className="text-24 md:text-32 font-semibold">
+            Our Trusted Clients
+          </div>
+        </div>
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 justify-center">
+          <div className="flex items-center">
+            <img
+              className="max-w-[200px] xl:max-w-[250px]  mx-auto"
+              src="client2.jpeg"
+            />
+          </div>
+          <div className="flex items-center">
+            <img
+              className="max-w-[200px] xl:max-w-[250px]  my-auto mx-auto"
+              src="client1.png"
+            />
+          </div>
+          <div className="flex items-center">
+            <img
+              className="max-w-[200px] xl:max-w-[250px]  mx-auto"
+              src="client3.jpeg"
+            />
+          </div>
+          <div className="flex flex-col">
+            <div className="flex items-center">
+              <img
+                className="max-w-[200px] xl:max-w-[250px] mx-auto bg-black"
+                src="/testimonial1.png"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="md:h-[100vh] md:px-20 px-8 pb-20 pt-10" id="portfolio">
         <div className="text-center mb-10">
           <div className="text-24 md:text-32 font-semibold">Our Portfolio</div>
           <div className="text-22 md:text-24 font-medium">

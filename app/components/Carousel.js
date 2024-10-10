@@ -9,8 +9,7 @@ const items = [
     subTitle: null,
     description:
       "Working with Edgenus has been a game-changer for our brand. They didn’t just enhance our social presence; they built a solid portfolio and amplified our brand value. The buzz they created brought in more leads than we ever expected. Their hands-on, creative approach perfectly aligned with our vision. We couldn't have asked for a better partner in our growth journey!",
-  },
-  // You can add more items to test
+  }, // You can add more items to test
   // { id: 2, imageUrl: "/testimonial2.png", title: "Another Title", description: "Another description" },
 ];
 
@@ -71,9 +70,9 @@ export default function Carousel() {
                 <img
                   src={item.imageUrl}
                   alt={item.description}
-                  className="w-full max-w-[504px] object-cover rounded-lg bg-black mx-auto"
+                  className="w-full max-h-[204px] max-w-2/3 object-contain rounded-lg bg-black mx-auto"
                 />
-                <div className="overflow-scroll max-w-[504px]">
+                <div className="overflow-scroll">
                   <p className="text-22 font-semibold mt-3">{item.title}</p>
                   {item.subTitle && (
                     <p className="text-normal md:text-22 xl:text-28 font-semibold">
