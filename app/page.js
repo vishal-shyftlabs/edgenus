@@ -52,9 +52,11 @@ export default function Home() {
       </div>
       <div className="md:h-[100vh] md:px-20 px-8 pb-20 pt-10" id="portfolio">
         <div className="text-center mb-10">
-          <div className="text-24 md:text-32 font-semibold">Our Portfolio</div>
+          <div className="text-24 md:text-32 font-semibold">
+            Customer testimonials
+          </div>
           <div className="text-22 md:text-24 font-medium">
-            Clients we have worked with
+            Impact we generate in their day-to-day
           </div>
         </div>
         <Carousel />
